@@ -51,16 +51,20 @@
 
 // 中文摘要
 #abstract(
-  keywords: ("我", "就是", "测试用", "关键词")
+  keywords: ("顶格", "黑体", "小四号", "与摘要隔一行")
 )[
-  中文摘要
+  中文摘要应将毕业设计(论文)要点简明扼要地表达出来,是一篇具有独立性和完整性的短文。内容应包括工作目的、研究方法、成果和结论。关键词是为了文献标引工作从论文中选取出来用以表示全文主题内容信息款目的单词或术语,毕业设计(论文)中文摘要一般 300 字左右,关键词 3-5 个。英文摘要和关键词应与中文对应。
+
+  首行缩进2个字符，正文用宋体小四号，1.5倍行距，中文摘要不少于300字，一般控制在300～500字。
 ]
 
 // 英文摘要
 #abstract-en(
-  keywords: ("Dummy", "Keywords", "Here", "It Is")
+  keywords: ("顶格", "Times New Roman", "加黑", "小四号")
 )[
-  English abstract
+  From "silica" to "Naquada", this is an example of transliterated words replacing free-translated words. However, such examples are rare in Chinese. Because Chinese people generally don’t like transliterated words, but like free-translated words. The latter can make the meaning of the words clear, while the former does not have this feature. So why does the Chinese translation of Naquadah take exactly the opposite path? There may be many reasons for this. First of all, compared with "Naquada", the name "silica" is a bit long. Secondly, it is important to understand "silica" literally, which is still somewhat distant from Naquadah. However, it is not easy to come up with an appropriate name. 
+  
+  首行空2个字符内容采用小四号Times New Roman字体，1.5倍行距。两端对齐，标点符号用英文标点符号。与中文摘要部分的关键词对应，每个关键词之间用分号间隔，关键词首字母大写。
 ]
 
 // 目录
