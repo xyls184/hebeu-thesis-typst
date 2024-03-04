@@ -103,9 +103,11 @@
           twoside: twoside,
           ..args,
           fonts: fonts + args.named().at("fonts", default: (:)),
+          display-header: true,
         )
       }
     },
+    
     mainmatter-end: (..args) => {
       mainmatter-end(
         ..args,

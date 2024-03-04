@@ -1,3 +1,12 @@
+问题：
+1. 不知道怎么实现 1.5 倍行距，所以是打开预览和 word 文档缩放至肉眼可见相同大小调节的
+2. 最后改：黑体字体和 word 内不同
+
+
+
+
+
+
 # 南京大学学位论文 nju-thesis-typst
 
 南京大学毕业论文（设计）的 Typst 模板，能够简洁、快速、持续生成 PDF 格式的毕业论文。
@@ -20,7 +29,7 @@
 Typst 是可用于出版的可编程标记语言，拥有变量、函数与包管理等现代编程语言的特性，注重于科学写作 (science writing)，定位与 LaTeX 相似。可以阅读我的 [一篇知乎文章](https://zhuanlan.zhihu.com/p/669097092) 进一步了解 Typst 的优势。
 
 - **语法简洁**：上手难度跟 Markdown 相当，文本源码阅读性高，不会像 LaTeX 一样充斥着反斜杠与花括号。
-- **编译速度快**：Typst 使用 Rust 语言编写，即 typ(e+ru)st，目标运行平台是WASM，即浏览器本地离线运行；也可以编译成命令行工具，采用一种 **增量编译** 算法和一种有约束的版面缓存方案，**文档长度基本不会影响编译速度，且编译速度与常见 Markdown 渲染引擎渲染速度相当**。
+- **编译速度快**：Typst 使用 Rust 语言编写，即 typ(e+ru)st，目标运行平台是 WASM，即浏览器本地离线运行；也可以编译成命令行工具，采用一种 **增量编译** 算法和一种有约束的版面缓存方案，**文档长度基本不会影响编译速度，且编译速度与常见 Markdown 渲染引擎渲染速度相当**。
 - **环境搭建简单**：不需要像 LaTeX 一样折腾几个 G 的开发环境，原生支持中日韩等非拉丁语言，无论是官方 Web App 在线编辑，还是使用 VS Code 安装插件本地开发，都是 **即开即用**。
 - **现代编程语言**：Typst 是可用于出版的可编程标记语言，拥有 **变量、函数、包管理与错误检查** 等现代编程语言的特性，同时也提供了 **闭包** 等特性，便于进行 **函数式编程**。以及包括了 `[标记模式]`、`{脚本模式}` 与 `$数学模式$` 等多种模式的作用域，并且它们可以不限深度地、交互地嵌套。并且通过 **包管理**，你不再需要像 TexLive 一样在本地安装一大堆并不必要的宏包，而是 **按需自动从云端下载**。
 
@@ -29,7 +38,7 @@ Typst 是可用于出版的可编程标记语言，拥有变量、函数与包�
 
 ## 使用
 
-快速浏览效果: 查看 [thesis.pdf](https://github.com/OrangeX4/nju-thesis-typst/blob/main/thesis.pdf)，样例论文源码：查看 [thesis.typ](https://github.com/OrangeX4/nju-thesis-typst/blob/main/thesis.typ)
+快速浏览效果：查看 [thesis.pdf](https://github.com/OrangeX4/nju-thesis-typst/blob/main/thesis.pdf)，样例论文源码：查看 [thesis.typ](https://github.com/OrangeX4/nju-thesis-typst/blob/main/thesis.typ)
 
 **你只需要修改根目录下的 `thesis.typ` 文件即可，基本可以满足你的所有需求，`nju-thesis` 目录下的代码可以用于参数查阅，但是理论上你不应该对其进行更改。**
 
@@ -239,17 +248,17 @@ PS: 虽然与 Overleaf 看起来相似，但是它们底层原理并不相同。
 
 ### 外部目录
 
-- `thesis.typ` 文件: 你的论文源文件，可以随意更改这个文件的名字，甚至你可以将这个文件在同级目录下复制多份，维持多个版本。
-- `bibs` 目录: 放置参考文献的目录。
-- `nju-thesis` 目录: 模板目录，放置模板的所有内容，**这个目录可以作为一个 Local Package 安装到本地包目录**，因此理论上你不应该修改这个目录下的任何东西。
+- `thesis.typ` 文件：你的论文源文件，可以随意更改这个文件的名字，甚至你可以将这个文件在同级目录下复制多份，维持多个版本。
+- `bibs` 目录：放置参考文献的目录。
+- `nju-thesis` 目录：模板目录，放置模板的所有内容，**这个目录可以作为一个 Local Package 安装到本地包目录**，因此理论上你不应该修改这个目录下的任何东西。
 
 
 ### 内部目录
 
-- `utils` 目录: 包含了模板使用到的各种自定义辅助函数，存放没有外部依赖，且 **不会渲染出页面的函数**。
-  - <del>`i-equation.typ` 文件: 模仿 [i-figured](https://github.com/typst/packages/tree/main/packages/preview/i-figured/0.1.0) 包编写的数学公式编号函数。</del> 已经合并至 [i-figured](https://github.com/typst/packages/tree/main/packages/preview/i-figured/0.2.2).
-- `templates` 目录: 包含了模板用到的各个 **独立页面**，例如封面页、声明页、摘要等，即 **会渲染出不影响其他页面的独立页面的函数**。
-- `layouts` 目录: 布局目录，存放着用于排篇布局的、应用于 `show` 指令的、**横跨多个页面的函数**，例如为了给页脚进行罗马数字编码的前言 `preface` 函数。
+- `utils` 目录：包含了模板使用到的各种自定义辅助函数，存放没有外部依赖，且 **不会渲染出页面的函数**。
+  - <del>`i-equation.typ` 文件：模仿 [i-figured](https://github.com/typst/packages/tree/main/packages/preview/i-figured/0.1.0) 包编写的数学公式编号函数。</del> 已经合并至 [i-figured](https://github.com/typst/packages/tree/main/packages/preview/i-figured/0.2.2).
+- `templates` 目录：包含了模板用到的各个 **独立页面**，例如封面页、声明页、摘要等，即 **会渲染出不影响其他页面的独立页面的函数**。
+- `layouts` 目录：布局目录，存放着用于排篇布局的、应用于 `show` 指令的、**横跨多个页面的函数**，例如为了给页脚进行罗马数字编码的前言 `preface` 函数。
   - 主要分成了 `doc` 文稿、`preface` 前言、`mainmatter` 正文与 `appendix` 附录/后记。
 - `template.typ`:
   - **职责一**: 作为一个统一的对外接口，暴露出内部的 utils 函数，例如三线表 `tlt` 函数。

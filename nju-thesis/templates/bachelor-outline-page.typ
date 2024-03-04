@@ -18,18 +18,18 @@
   reference-size: 字号.小四,
   // 字体与字号
   font: auto,
-  size: (字号.四号, 字号.小四),
+  size: (字号.小四, 字号.小四),
   // 垂直间距
   vspace: (25pt, 14pt),
   indent: (0pt, 18pt, 28pt),
   // 一级标题不显示点号
-  fill: (none, auto),
+  fill: (auto, auto),
   ..args,
 ) = {
   // 1.  默认参数
   fonts = 字体 + fonts
   if (title-text-args == auto) {
-    title-text-args = (font: fonts.宋体, size: 字号.三号, weight: "bold")
+    title-text-args = (font: fonts.黑体, size: 字号.三号, weight: "bold")
   }
   // 引用页数的字体，这里用于显示 Times New Roman
   if (reference-font == auto) {
@@ -50,7 +50,7 @@
     set align(center)
     text(..title-text-args, title)
     // 标记一个不可见的标题用于目录生成
-    invisible-heading(level: 1, outlined: outlined, title)
+    // invisible-heading(level: 1, outlined: outlined, title)
   }
 
   v(title-vspace)

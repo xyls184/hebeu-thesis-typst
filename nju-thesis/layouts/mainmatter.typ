@@ -11,19 +11,19 @@
   twoside: false,
   fonts: (:),
   // 其他参数
-  leading: 1.25em,
+  leading: 0.999em,
   spacing: 1.25em,
   justify: true,
   first-line-indent: 2em,
-  numbering: custom-numbering.with(first-level: "第一章 ", depth: 3, "1.1 "),
+  numbering: custom-numbering.with(first-level: "第1章 ", depth: 3, "1.1  "),
   // 正文字体与字号参数
   text-args: auto,
   // 标题字体与字号
   heading-font: auto,
-  heading-size: (字号.四号,),
+  heading-size: (字号.三号,字号.四号,字号.小四),
   heading-weight: ("regular",),
-  heading-top-vspace: (20pt, 4pt),
-  heading-bottom-vspace: (20pt, 8pt),
+  heading-top-vspace: (1pt, 10pt),
+  heading-bottom-vspace: (25pt, 10pt),
   heading-pagebreak: (true, false),
   heading-align: (center, auto),
   // 页眉
@@ -122,31 +122,18 @@
   }
 
   // 5.  处理页眉
-  set page(..(if display-header {
-    (
-      header: locate(loc => {
-        // 5.1 获取当前页面的一级标题
-        let cur-heading = current-heading(level: 1, loc)
-        // 5.2 如果当前页面没有一级标题，则渲染页眉
-        if not skip-on-first-level or cur-heading == none {
-          if header-render == auto {
-            // 一级标题和二级标题
-            let first-level-heading = if not twoside or calc.rem(loc.page(), 2) == 0 { heading-display(active-heading(level: 1, loc)) } else { "" }
-            let second-level-heading = if not twoside or calc.rem(loc.page(), 2) == 2 { heading-display(active-heading(level: 2, prev: false, loc)) } else { "" }
-            set text(font: fonts.楷体, size: 字号.五号)
-            stack(
-              first-level-heading + h(1fr) + second-level-heading,
-              v(0.25em),
-              if first-level-heading != "" or second-level-heading != "" { line(length: 100%, stroke: stroke-width + black) },
-            )
-          } else {
-            header-render(loc)
-          }
-          v(header-vspace)
-        }
-      })
-    )
-  }))
+  // 萌新不会改原来的代码，所以现在强制开启页眉
+  
+  set page(
+    header: {
+      set text(font: fonts.宋体, size: 字号.五号, baseline: 8pt, spacing: 3pt)
+      set align(center)
+
+      [河北工程大学毕业论文]
+      
+      line(length: 100%, stroke: 0.7pt)
+    }
+  )
 
   it
 }
