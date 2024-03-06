@@ -30,6 +30,7 @@
 ![image](https://github.com/xyls184/hebeu-thesis-typst/assets/20354136/d2737d2a-60cd-445b-a50e-6d0ae03e524b)
 
 熟悉一下文件结构
+```bash
 │  thesis.pdf
 │  thesis.typ···········**你的论文源文件**
 ├─bibs··················放包含**参考文献**的文档的位置
@@ -47,6 +48,7 @@
 │  ├
 │  └─utils··············各种自定义辅助函数
 └─others················本科生和研究生的开题报告（这个项目暂时还没改，别用）
+```
 
 其他教程：
 - [官方文档](https://typst.app/docs/)
