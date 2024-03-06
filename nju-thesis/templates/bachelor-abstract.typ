@@ -13,7 +13,7 @@
   info: (:),
   // 其他参数
   keywords: (),
-  outline-title: "中文摘要",
+  outline-title: "摘要",
   outlined: true,
   anonymous-info-keys: ("author", "supervisor", "supervisor-ii"),
   leading: 1.26em,
@@ -52,7 +52,7 @@
     #show par: set block(spacing: spacing)
 
     // 标记一个不可见的标题用于目录生成
-    // #invisible-heading(level: 1, outlined: outlined, outline-title)
+    #invisible-heading(level: 1, outlined: outlined, outline-title)
 
     #align(center)[
       #set text(size: 字号.小二, font: fonts.黑体)

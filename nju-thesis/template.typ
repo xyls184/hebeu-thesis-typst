@@ -22,10 +22,13 @@
 #import "templates/list-of-tables.typ": list-of-tables
 #import "templates/notation.typ": notation
 #import "templates/acknowledgement.typ": acknowledgement
+#import "templates/conclusion.typ": conclusion
 #import "utils/custom-numbering.typ": custom-numbering
 #import "utils/custom-heading.typ": heading-display, active-heading, current-heading
 #import "utils/custom-tablex.typ": *
 #import "utils/indent.typ": indent
+#import "@preview/tablex:0.0.8": tablex, rowspanx, colspanx, cellx
+//表格包使用方法：https://github.com/PgBiel/typst-tablex
 #import "@preview/i-figured:0.2.2": show-figure, show-equation
 #import "utils/style.typ": 字体
 #import "utils/style.typ": 字号
@@ -44,6 +47,7 @@
   fonts = 字体 + fonts
   info = (
     title: ("基于 Typst 的", "南京大学学位论文"),
+    title2: ("基于 Typst 的南京大学学位论文"),
     title-en: "NJU Thesis Template for Typst",
     grade: "20XX",
     student-id: "1234567890",
@@ -75,6 +79,8 @@
     degree: auto,
     degree-en: auto,
   ) + info
+
+
 
   (
     // 页面布局
@@ -260,6 +266,14 @@
         ..args,
       )
     },
+    // 结论页
+    conclusion: (..args) => {
+      conclusion(
+        anonymous: anonymous,
+        twoside: twoside,
+        ..args,
+      )
+    },
 
     // 致谢页
     acknowledgement: (..args) => {
@@ -271,3 +285,4 @@
     },
   )
 }
+

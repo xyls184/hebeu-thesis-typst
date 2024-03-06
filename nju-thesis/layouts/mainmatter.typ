@@ -5,14 +5,16 @@
 #import "../utils/custom-heading.typ": heading-display, active-heading, current-heading
 #import "../utils/indent.typ": fake-par
 #import "../utils/unpairs.typ": unpairs
+#import "@preview/tablex:0.0.8": tablex, rowspanx, colspanx, cellx
+
 
 #let mainmatter(
   // documentclass 传入参数
   twoside: false,
   fonts: (:),
   // 其他参数
-  leading: 0.999em,
-  spacing: 1.25em,
+  leading: 1.07em,
+  spacing: 1.2em,
   justify: true,
   first-line-indent: 2em,
   numbering: custom-numbering.with(first-level: "第1章 ", depth: 3, "1.1  "),
@@ -22,8 +24,8 @@
   heading-font: auto,
   heading-size: (字号.三号,字号.四号,字号.小四),
   heading-weight: ("regular",),
-  heading-top-vspace: (1pt, 10pt),
-  heading-bottom-vspace: (25pt, 10pt),
+  heading-top-vspace: (34pt, 15pt,4pt),
+  heading-bottom-vspace: (27.5pt, 23pt,7pt),
   heading-pagebreak: (true, false),
   heading-align: (center, auto),
   // 页眉
@@ -135,5 +137,6 @@
     }
   )
 
+  
   it
 }

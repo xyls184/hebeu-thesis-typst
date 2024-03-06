@@ -52,7 +52,7 @@
     #show par: set block(spacing: spacing)
 
     // 标记一个不可见的标题用于目录生成
-    // #invisible-heading(level: 1, outlined: outlined, outline-title)
+    #invisible-heading(level: 1, outlined: outlined, outline-title)
 
     #v(1.5em)
 
