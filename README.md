@@ -1,9 +1,8 @@
-# 河北工程大学大学学位论文 hebeu-thesis-typst （非官方）
+# 河北工程大学大学学位论文 hebeu-thesis-typst（非官方）
 
 
 刚发现还没写的东西，正在修复
-- [ ] 篇眉自正文第一章开始，采用宋体五号字居中书写。奇数页为毕业设计（论文）题目，偶数页为“河北工程大学毕业设计（论文）”。
-- [ ] 正文中的参考文献序号采用上标进行标注。
+- [ ] **无法完美解决**：奇数页为毕业设计（论文）题目，偶数页为“河北工程大学毕业设计（论文）”。
 
 
 ![image](https://github.com/xyls184/hebeu-thesis-typst/assets/20354136/3726d2b1-b93a-4183-9df0-67d3742b903e)
@@ -13,26 +12,26 @@
 ![731d3d6b2f359cb529bed745d7f12e57](https://github.com/xyls184/hebeu-thesis-typst/assets/20354136/b1474eaf-9dd6-448d-a95f-9a3af6b5905e)
 
 ## 预览
-[点我预览本模板最终渲染出来的pdf](https://github.com/xyls184/hebeu-thesis-typst/blob/main/thesis.pdf)
+[点我预览本模板最终渲染出来的 pdf](https://github.com/xyls184/hebeu-thesis-typst/blob/main/thesis.pdf)
 
 ## 安装
-我没有除Windows以外的其他系统，所以下面的教程都基于Windows 11/10。其他系统的步骤应该类似。
+我没有除 Windows 以外的其他系统，所以下面的教程都基于 Windows 11/10。其他系统的步骤应该类似。
 
-如果使用vscode编写，请安装以下组件：
+如果使用 vscode 编写，请安装以下组件：
 - [typst-lsp 主要组件](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp)
 - [typst pdf 预览组件](https://marketplace.visualstudio.com/items?itemName=mgt19937.typst-preview)
 - [（可选）typst 快捷键）](https://marketplace.visualstudio.com/items?itemName=CalebFiggers.typst-companion)
-一般写完后vscode内的组件会为你自动编译。
+一般写完后 vscode 内的组件会为你自动编译。
 
-如果想要自己编译，请参照[官方教程](https://github.com/typst/typst?tab=readme-ov-file#installation)（注：新手不用学，用vscode就好）
+如果想要自己编译，请参照[官方教程](https://github.com/typst/typst?tab=readme-ov-file#installation)（注：新手不用学，用 vscode 就好）
 
 ![image](https://github.com/xyls184/hebeu-thesis-typst/assets/20354136/342ade30-9003-4011-b56a-b9512516145f)
 
-使用上图中任意一种方法把项目下载到本地（注：新手不知道clone是啥直接下载zip解压到你想工作的位置就好）。
+使用上图中任意一种方法把项目下载到本地（注：新手不知道 clone 是啥直接下载 zip 解压到你想工作的位置就好）。
 
-右键单击文件夹内选择你的编译器内打开。这里我用的是vscode：
+右键单击文件夹内选择你的编译器内打开。这里我用的是 vscode：
 
-首先选择thesis.typ，在其中任意位置单击光标。如果你安装了我上面说的插件之后，右上角会出现这个按钮（注意不要和LaTeX的搞混）。
+首先选择 thesis.typ，在其中任意位置单击光标。如果你安装了我上面说的插件之后，右上角会出现这个按钮（注意不要和 LaTeX 的搞混）。
 ![image](https://github.com/xyls184/hebeu-thesis-typst/assets/20354136/d2737d2a-60cd-445b-a50e-6d0ae03e524b)
 
 熟悉一下文件结构
@@ -69,12 +68,12 @@
 - 感谢 [@atxy-blip](https://github.com/atxy-blip) 开发的 [NJUThesis](https://github.com/nju-lug/NJUThesis) LaTeX 模板，文档十分详细，本模板大体结构都是参考 NJUThesis 的文档开发的。
 - 感谢 [HUST-typst-template](https://github.com/werifu/HUST-typst-template) 与 [sysu-thesis-typst](https://github.com/howardlau1999/sysu-thesis-typst) 等 Typst 中文论文模板。
 - 感谢 [nju-thesis-typst](https://github.com/nju-lug/nju-thesis-typst)提供非常方便改的源码，如果复刻建议用他的。
-- 感谢 [tablex库](https://github.com/PgBiel/typst-tablex)让学校提出对表的要求成为可能。
-- 感谢 [typst官方](https://typst.app/)。
-- 感谢 [typst非官方中文文档](https://typst-doc-cn.github.io/docs/)。
+- 感谢 [tablex 库](https://github.com/PgBiel/typst-tablex)让学校提出对表的要求成为可能。
+- 感谢 [typst 官方](https://typst.app/)。
+- 感谢 [typst 非官方中文文档](https://typst-doc-cn.github.io/docs/)。
 - 感谢 [让我知道以上项目的聚合网站](https://github.com/typst-cn/awesome-typst-cn?tab=readme-ov-file)。
-- 感谢 🐦‍⬛、Typst非官方社区好心人能解答我的问题。
-- 感谢父母，感谢群友，感谢我的学校，感谢Miku，感谢啤酒烧烤，感谢所有支持我的人，谢谢大家。
+- 感谢 🐦‍⬛、Typst 非官方社区好心人能解答我的问题。
+- 感谢父母，感谢群友，感谢我的学校，感谢 Miku，感谢啤酒烧烤，感谢所有支持我的人，谢谢大家。
 
 ## License
 
