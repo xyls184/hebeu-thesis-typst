@@ -3,6 +3,8 @@
 
 刚发现还没写的东西，正在修复
 - [ ] **无法完美解决**：奇数页为毕业设计（论文）题目，偶数页为“河北工程大学毕业设计（论文）”。
+- [ ] 黑体和Windows word中的不一致
+- [ ] 河工程logo清晰度有点低
 
 
 ![image](https://github.com/xyls184/hebeu-thesis-typst/assets/20354136/3726d2b1-b93a-4183-9df0-67d3742b903e)
