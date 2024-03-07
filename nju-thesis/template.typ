@@ -103,16 +103,19 @@
           display-header: true,
           ..args,
           fonts: fonts + args.named().at("fonts", default: (:)),
+          info: info + args.named().at("info", default: (:)),
         )
       } else {
         mainmatter(
           twoside: twoside,
           ..args,
           fonts: fonts + args.named().at("fonts", default: (:)),
+          info: info + args.named().at("info", default: (:)),
           display-header: true,
         )
       }
     },
+    
     
     mainmatter-end: (..args) => {
       mainmatter-end(
