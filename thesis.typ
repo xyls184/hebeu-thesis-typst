@@ -294,8 +294,7 @@ def add(x, y):
   pagebreak() + " "
 }
 
-// 正文结束标志，不可缺少
-#mainmatter-end()
+
 
 
 // 手动分页
@@ -303,9 +302,9 @@ def add(x, y):
   pagebreak() + " "
 }
 
-// 参考文献
-#bibliography(("bibs/ex01.bib", "bibs/ex02.bib"),
-  style: "ieee"
+参考文献
+#bibliography(("bibs/ex01.bib"),
+  style: "hust-cse-ug.csl"
 )
 
 #conclusion[
@@ -353,3 +352,6 @@ def add(x, y):
   caption: [图片测试],
 ) <appendix-img>
 
+
+// 正文结束标志，不可缺少
+#mainmatter-end()

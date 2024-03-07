@@ -12,6 +12,7 @@
   // documentclass 传入参数
   twoside: false,
   fonts: (:),
+  info: (:),
   // 其他参数
   leading: 1.07em,
   spacing: 1.2em,
@@ -43,6 +44,9 @@
   ..args,
   it,
 ) = {
+  info = (
+    title2: ("请自行来./layouts/mainmatter.typ搜索这段话填写标题，暂时无法解决"),
+  ) + info
   // 0.  标志前言结束
   anti-front-end()
 
@@ -125,17 +129,28 @@
 
   // 5.  处理页眉
   // 萌新不会改原来的代码，所以现在强制开启页眉
-  
   set page(
-    header: {
+    header: locate(loc => {
+      
       set text(font: fonts.宋体, size: 字号.五号, baseline: 8pt, spacing: 3pt)
       set align(center)
+      if calc.even(loc.page()) {
+              [
+               
+                河北工程大学毕业设计
+                #line(length: 100%,stroke: 0.5pt)
+                
+              ]
+            } else {
+              [
+                #info.title2
+                #line(length: 100%,stroke: 0.5pt)
+                
+              ]
+            }
 
-      [河北工程大学毕业论文]
-      
-      line(length: 100%, stroke: 0.7pt)
     }
-  )
+  ))
 
   
   it
