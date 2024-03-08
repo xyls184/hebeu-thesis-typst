@@ -14,7 +14,8 @@
 ![731d3d6b2f359cb529bed745d7f12e57](https://github.com/xyls184/hebeu-thesis-typst/assets/20354136/b1474eaf-9dd6-448d-a95f-9a3af6b5905e)
 
 ## 预览
-[点我预览本模板最终渲染出来的 pdf](https://github.com/xyls184/hebeu-thesis-typst/blob/main/thesis.pdf)
+[开题报告 PDF 预览](https://github.com/xyls184/hebeu-thesis-typst/blob/main/others/bachelor-proposal.pdf)
+[论文模板 PDF 预览](https://github.com/xyls184/hebeu-thesis-typst/blob/main/thesis.pdf)
 
 ## 安装
 我没有除 Windows 以外的其他系统，所以下面的教程都基于 Windows 11/10。其他系统的步骤应该类似。
