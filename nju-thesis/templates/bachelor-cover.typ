@@ -112,10 +112,6 @@
     // 封面图标
     v(88pt)
     image("../assets/vi/hebeulogo.jpg", width: 12.09cm)
-    // v(22pt)
-    // 调整一下左边的间距
-    // pad(image("../assets/vi/nju-name.svg", width: 10.5cm), left: 0.4cm)
-    // v(20pt)
   }
   v(-23pt)
   // 将中文之间的空格间隙从 0.25 em 调整到 0.5 em
@@ -134,13 +130,6 @@ text(
     题目：#underline[#info.title2]
 ]
 
-  // block(width: 40em, gridx(
-  //   columns: (info-key-width, 1fr, info-key-width, 1fr),
-  //   column-gutter: column-gutter,
-  //   row-gutter: row-gutter,
-  // info-key("题目"),
-  // ..info.title.map((s) => info-long-value("title", s)).intersperse(info-key("　")),
-  // ))
   v(26pt)
   
   block(width: 22em, gridx(
@@ -166,7 +155,8 @@ text(
     )} else {()}),
     // info-key("提交日期"),
     // info-long-value("submit-date", info.submit-date),
-  ))
+  )
+  )
 v(88pt)
   text(
     font: fonts.宋体,
