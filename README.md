@@ -1,5 +1,9 @@
 # 由于本人是大四学生，准备毕业了，后续不再维护
 
+# 由于 Typst 0.13 引入了许多不兼容改进，所以请在原文的基础上修改，不要从本文的基础上修改
+
+[如果非要用的话这里是改动说明](https://github.com/nju-lug/modern-nju-thesis/pull/13)
+
 # 河北工程大学大学学位论文 hebeu-thesis-typst（非官方）
 
 
